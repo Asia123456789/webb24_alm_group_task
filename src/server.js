@@ -23,6 +23,11 @@ async function testConnection() {
 
 testConnection();
 
+// Lägg till denna route för root:
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 // Routes
 app.use("/users", UserRouter);
 
